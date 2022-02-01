@@ -36,14 +36,17 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                   // height:400,
                   child: Padding(
-                padding: const EdgeInsets.all(22.0),
+                padding: const EdgeInsets.all(20.0),
                 child: Column(
                   children: [
                     Image.asset("assets/dolphin.png"),
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(24.0),
                       child: const Text(
-                          "Share your travel experience and gain trusted rocs from your friends"),
+                        "Share your travel experience and gain trusted rocs from your friends",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(fontSize: 17),
+                      ),
                     ),
                     // const TextField(
                     //   decoration: InputDecoration(
@@ -51,47 +54,28 @@ class _MyHomePageState extends State<MyHomePage> {
                     //           borderRadius:
                     //               BorderRadius.all(Radius.circular(8.0)))),
                     // ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    ElevatedButton(
-                      style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        // side: MaterialStateProperty.all<BorderSide>(
-                        //     width: 16.0, color: Colors.blue),
-                      ),
-                      onPressed: () {},
-                      // ElevatedButton.styleFrom(
-                      //     side: BorderSide(
-                      //   width: 5.0,
-                      //   color: Colors.red,
-                      // )),
-                      child: const Padding(
-                        padding: EdgeInsets.all(8.0),
+
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      height: MediaQuery.of(context).size.height * 0.06,
+                      child: OutlinedButton(
+                        onPressed: () {},
                         child: Text(
                           "Login with phone number",
-                          style: TextStyle(
-                            // fontWeight: FontWeight.w500,
-                            fontSize: 20,
-                            color: Colors.blue,
-                          ),
+                          style: TextStyle(fontSize: 20),
                         ),
+                        style: OutlinedButton.styleFrom(
+                            side: BorderSide(width: 2, color: Colors.blue)),
                       ),
+                    ),
+                    const SizedBox(
+                      height: 16,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.9,
                       height: MediaQuery.of(context).size.height * 0.06,
                       child: ElevatedButton(
                         onPressed: () {},
-                        // style: ElevatedButton.styleFrom(
-                        //   // ignore: prefer_const_constructors
-                        //   primary: Colors.green[900],
-                        //   // minimumSize: const Size.fromHeight(45),
-                        //   shape: RoundedRectangleBorder(
-                        //     borderRadius: BorderRadius.circular(10),
-                        //   ),
-                        // ),
                         style: ButtonStyle(
                           backgroundColor:
                               MaterialStateProperty.all<Color>(Colors.blue),
@@ -99,23 +83,23 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: const Padding(
                           padding: EdgeInsets.all(8.0),
                           child: Text(
-                            "Login with Facebook",
+                            "Login with phone Facebook",
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(22.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
-                            "Dont have an account?, ",
+                            "Dont have an account?",
                             style: TextStyle(fontSize: 20),
                           ),
                           Text(
-                            "Log In? ",
+                            "Log In",
                             style: TextStyle(color: Colors.blue, fontSize: 20),
                           ),
                         ],
